@@ -1,0 +1,26 @@
+# Template information section
+name: "module"
+summary: "Swift module template"
+author: "Igor Tyukavkin"
+version: "1.0.0"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+# Views
+- {name: Views/}
+
+# Interface
+- {name: Interface/Router.swift, path: Code/Interface/router.swift.liquid}
+- {name: Interface/PresentationModel.swift, path: Code/Interface/presentation_model.swift.liquid}
+
+# Controllers
+- {name: Controllers/ViewController.swift, path: Code/Controllers/viewcontroller.swift.liquid}
+
+# Storyboard
+- {name: .storyboard, path: Code/viewcontroller.storyboard.liquid}
+
+#- {name: Configurator/Configurator.swift, path: Code/Configurator/configurator.swift.liquid}
+#- {name: Configurator/Initializer.swift, path: Code/Configurator/initializer.swift.liquid}
+

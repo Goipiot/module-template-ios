@@ -1,0 +1,26 @@
+//
+//  {{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+class {{ module_info.name }}ViewController: CommonViewController {
+
+    private lazy var presentationModel: {{ module_info.name }}PresentationModel = {
+        let model = {{ module_info.name }}PresentationModel() { [weak self] in
+            self?.handleError($0)
+        }
+        model.loadingHandler = { [weak self] in
+            $0 ? self?.showHUD() : self?.hideHUD()
+        }
+        return model
+    }()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}
